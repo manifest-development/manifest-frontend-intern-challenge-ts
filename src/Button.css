@@ -1,0 +1,97 @@
+.btn {
+  --mint: #3b968b;
+  --sugar: #ffffff;
+  --shadow: #2e2d2940;
+  --disabled-fill: #fff6ef;
+  --disabled-text-primary: #2e2d2980;
+  --disabled-text-secondary: #2e2d294d;
+  --disabled-border: #2e2d291a;
+
+  font-family: 'Work Sans', sans-serif;
+  gap: 10px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.btn[data-size="mobile"] {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 9px;
+  padding: 8px 129px;
+}
+
+.btn[data-size="desktop"] {
+  width: 600px;
+  height: fit-content;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 8px 0px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn[data-variant="primary"] {
+  background-color: var(--mint);
+  color: var(--sugar);
+}
+
+.btn[data-variant="primary"][data-active="true"] {
+  background-color: var(--mint);
+  color: var(--sugar);
+}
+
+.btn[data-variant="primary"]:disabled {
+  background-color: var(--disabled-fill);
+  color: var(--disabled-text-primary);
+  cursor: not-allowed;
+}
+
+.btn[data-variant="secondary"] {
+  background-color: var(--sugar);
+  color: var(--mint);
+  border: 2px solid var(--mint);
+}
+
+.btn[data-variant="secondary"][data-active="true"] {
+  background-color: var(--sugar);
+  color: var(--mint);
+  border: 2px solid var(--mint);
+}
+
+.btn[data-variant="secondary"]:disabled {
+  background-color: transparent;
+  color: var(--disabled-text-secondary);
+  border: 2px solid var(--disabled-border);
+  cursor: not-allowed;
+}
+
+.btn[data-variant="text"] {
+  background-color: transparent;
+  color: var(--mint);
+}
+
+.btn[data-variant="text"][data-active="true"] {
+  background-color: transparent;
+  color: var(--mint);
+}
+
+.btn[data-variant="text"]:disabled {
+  background-color: transparent;
+  color: var(--disabled-text-secondary);
+  cursor: not-allowed;
+}
+
+.btn:hover {
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.btn:active:not(:disabled) {
+  opacity: 0.9;
+}
+
+.btn[data-inverted="true"] {
+  background-color: var(--sugar);
+  color: var(--mint);
+  border: 2px solid var(--mint);
+}
