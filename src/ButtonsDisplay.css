@@ -1,0 +1,19 @@
+#outer-btns-wrapper {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 9px;
+}
+
+.btn-state-wrapper {
+  border-radius: 9px;
+  background-color: white;
+  padding: 1rem;
+}
+
+.btn-variant-wrapper {
+  border-radius: 10px;
+  background-color: #ffe8c8;
+  padding: 1rem 1rem 3rem 1rem;
+}

@@ -1,0 +1,83 @@
+.btn-desktop {
+  max-width: 600px;
+  width: 100%;
+  height: 42px;
+  font-size: 18px;
+}
+
+.btn-mobile {
+  max-width: 329px;
+  width: 100%;
+  height: 42px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #3b968b;
+  color: white;
+}
+
+.btn-primary:disabled,
+.btn-primary:hover:disabled,
+.btn-primary.hover {
+  color: #2e2d2980;
+  outline-color: #ebe2da;
+  background-color: #ebe2da;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #3b968b;
+}
+
+.btn-secondary:disabled,
+.btn-secondary:hover:disabled {
+  color: #2e2d294d;
+  outline-color: #2e2d294d;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #3b968b;
+}
+
+.btn-text {
+  background: none;
+  color: #3b968b;
+  outline: 2px solid transparent;
+  width: fit-content;
+}
+
+.btn-text:disabled {
+  color: #2e2d294d;
+}
+
+button {
+  outline: 2px solid #3b968b;
+  font-weight: 600;
+  font-family: "Work Sans";
+  transition: all 0.3s ease-in-out;
+  border-radius: 9px;
+  cursor: pointer;
+  border: none;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+button:hover:enabled {
+  box-shadow: 0 10px 20px 0 #00000034;
+  background-color: #3b968b;
+  color: #ffffff;
+  outline: 2px solid #3b968b;
+}
+
+button:focus {
+  opacity: 90%;
+}
+
+.btn-inverted:hover:enabled {
+  background-color: white;
+  color: #3b968b;
+}
