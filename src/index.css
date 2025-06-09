@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -54,6 +56,148 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+button:focus {
+  outline: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sample-button {
+  position: relative;
+  width: 600px;
+  height: 42px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #3b968b;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0s, background-color 0.3s;
+}
+
+.sample-button.secondary-button {
+  background-color: white;
+  color: #3b968b;
+  border-color: #3b968b;
+  border-width: 3px;
+}
+
+.sample-button.text-button {
+  background-color: white;
+  color: #3b968b;
+}
+
+.sample-button:disabled {
+  background-color: #e8dfd9;
+  border-color: #e8dfd9;
+  color: #4e4846;
+  cursor: not-allowed;
+}
+
+.sample-button:disabled:hover,
+.sample-button.sample-button.secondary-button:disabled:hover {
+  background-color: #e8dfd9;
+  border-color: #e8dfd9;
+  color: #4e4846;
+  cursor: not-allowed;
+}
+
+.sample-button:hover,
+.sample-button.sample-button.text-button:hover {
+  border: none;
+  background-color: #3b968b;
+  color: white;
+}
+
+.sample-button.secondary-button:disabled {
+  background-color: white;
+  border-color: #2e2d291c;
+  color: #2e2d2960;
+}
+
+.sample-button.text-button {
+  border: none;
+  background-color: white;
+  color: #3b968b;
+}
+
+.sample-button.text-button:disabled {
+  color: #2e2d2960;
+}
+
+.sample-button.text-button:active {
+  color: #3b968be5;
+  background-color: white;
+}
+
+.sample-button::before {
+  content: "";
+  position: absolute;
+  width: 637px;
+  height: 70px;
+  background: linear-gradient(
+    to top,
+    #2e2d2911 0%,
+    #ffffff00 60%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: -1;
+}
+
+.sample-button:hover::before {
+  opacity: 1;
+}
+
+.sample-button:active {
+  background-color: #3b968be5;
+  color: #fff6ef;
+}
+
+.sample-button.secondary-button:active {
+  background-color: white;
+  border-style: solid;
+  border-width: 3px;
+  color: #3b968b;
+  border-color: #3b968b;
+}
+
+.sample-button.inverted,
+.sample-button.inverted:active {
+  background-color: white;
+  color: white;
+}
+
+.sample-button.secondary-button.inverted,
+.sample-button.secondary-button.inverted:active {
+  background-color: white;
+  color: white;
+  border-color: white;
+}
+
+.sample-button.inverted:hover,
+.sample-button.text-button.inverted:hover {
+  border-style: solid;
+  background-color: white;
+  color: #3b968b;
+  border-color: #3b968b;
+}
+
+.toggle-button {
+  border-radius: 0;
+}
+
+.toggle-button.active {
+  border-radius: 0;
+  background-color: #3b968b;
+  color: white;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -64,5 +208,18 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 640px) {
+  .sample-button {
+    width: 329px;
+    height: 40px;
+    border-radius: 9px;
+  }
+
+  .sample-button:hover::before {
+    width: 375px;
+    height: 70px;
   }
 }
